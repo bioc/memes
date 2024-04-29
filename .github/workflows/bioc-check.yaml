@@ -217,10 +217,8 @@ jobs:
           ## For running the checks
           message(paste('****', Sys.time(), 'installing rcmdcheck and BiocCheck ****'))
           remotes::install_cran("rcmdcheck")
-          #TODO: temporary fix until dev version builds at bioc
-          remotes::install_github("bjmt/universalmotif")
-          remotes::install_github("Bioconductor/BiocCheck")
-          #BiocManager::install("BiocCheck")
+          #remotes::install_github("Bioconductor/BiocCheck")
+          BiocManager::install("BiocCheck")
         shell: Rscript {0}
 
       - name: Session info
@@ -312,7 +310,7 @@ jobs:
         ## Builds pkg in docs, then moves to new repo
 
       - name: Push pkgdown site to Site repo
-        if: github.ref == 'refs/heads/master' && env.run_pkgdown == 'true'
+        if: github.ref == 'refs/heads/devel' && env.run_pkgdown == 'true'
         uses: cpina/github-action-push-to-another-repository@v1.2
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
