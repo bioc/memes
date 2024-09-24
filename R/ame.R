@@ -182,7 +182,7 @@ importAme <- function(path, method = c("fisher", "ranksum", "dmhg3", "dmhg4", "p
   }
 
   if (has_sequences && method != "fisher") {
-    msg <- glue::glue("`sequences` argument is invalid unless method = 'fisher'.")
+    msg <- "`sequences` argument is invalid unless method = 'fisher'."
     stop(msg, call. = FALSE)
   }
   if (!has_sequences || method != "fisher") {
