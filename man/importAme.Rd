@@ -4,7 +4,11 @@
 \alias{importAme}
 \title{Parse AME output}
 \usage{
-importAme(path, method = "fisher", sequences = FALSE)
+importAme(
+  path,
+  method = c("fisher", "ranksum", "dmhg3", "dmhg4", "pearson", "spearman"),
+  sequences = NULL
+)
 }
 \arguments{
 \item{path}{path to ame results file ("ame.tsv")}
@@ -12,7 +16,8 @@ importAme(path, method = "fisher", sequences = FALSE)
 \item{method}{ame run method used (one of: c("fisher", "ranksum", "dmhg3",
 "dmhg4", "pearson", "spearman")). Default: "fisher".}
 
-\item{sequences}{FALSE or path to sequences file (only valid for method = "fisher")}
+\item{sequences}{NULL/FALSE to skip sequence import, or path to sequences
+file to import (only valid for method = "fisher")}
 }
 \value{
 data.frame with method-specific results. See [AME
