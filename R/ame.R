@@ -143,7 +143,8 @@ prepareAmeFlags <- function(control, outdir, method, ...){
 #' @param path path to ame results file ("ame.tsv")
 #' @param method ame run method used (one of: c("fisher", "ranksum", "dmhg3",
 #'   "dmhg4", "pearson", "spearman")). Default: "fisher".
-#' @param sequences FALSE or path to sequences file (only valid for method = "fisher")
+#' @param sequences NULL/FALSE to skip sequence import, or path to sequences
+#'   file to import (only valid for method = "fisher")
 #'
 #' @return data.frame with method-specific results. See [AME
 #'   results](http://meme-suite.org/doc/ame-output-format.html) webpage for more
@@ -163,8 +164,9 @@ prepareAmeFlags <- function(control, outdir, method, ...){
 #' @examples
 #' ame_tsv <- system.file("extdata", "ame.tsv", package = "memes", mustWork = TRUE)
 #' importAme(ame_tsv)
-importAme <- function(path, method = "fisher", sequences = FALSE){
-
+importAme <- function(path, method = c("fisher", "ranksum", "dmhg3", "dmhg4", "pearson", "spearman"), sequences = NULL) {
+  method <- match.arg(method)
+  has_sequences <- is.character(sequences)
   cols <- get_ame_coltypes(method)
 
   data <- readr::read_tsv(path,
@@ -179,9 +181,15 @@ importAme <- function(path, method = "fisher", sequences = FALSE){
     return(NULL)
   }
 
-  if (!sequences | method != "fisher"){return(data)}
+  if (has_sequences && method != "fisher") {
+    msg <- glue::glue("`sequences` argument is invalid unless method = 'fisher'.")
+    stop(msg, call. = FALSE)
+  }
+  if (!has_sequences || method != "fisher") {
+    return(data)
+  }
 
-  if (sequences & method == "fisher"){
+  if (has_sequences && method == "fisher") {
     seq <- importAmeSequences(sequences)
 
     if (is.null(seq)){
