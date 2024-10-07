@@ -1,3 +1,5 @@
+# memes 1.12.1
+* Fixed an error in importAme that prevented import when runAme was run with sequences = TRUE (Reported by @withermatt on Github. Thank you!)
 # memes 1.7.1
 * Fixed typos describing the `parse_genomic_coord` parameter in `runFimo` and `runMeme` documentation & error messages for clarity. (Nice catch, Soren Heidelbach!)
 * Added CITATION file
