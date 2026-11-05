@@ -65,7 +65,7 @@ output, setting \code{silent = FALSE} can aid troubleshooting.}
 }
 \value{
 GRanges object containing positions of each match. Note: if
-\code{parse_genomic_coords = FALSE}, each \code{seqnames} entry will be the full fasta
+\code{parse_genomic_coord = FALSE}, each \code{seqnames} entry will be the full fasta
 header, and start/end will be the relative position within that sequence of the
 match. The GRanges object has the following additional \code{mcols}:
 * motif_id = primary name of matched motif

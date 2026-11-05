@@ -70,48 +70,61 @@ export(runTomTom)
 export(update_best_match)
 export(view_tomtom_hits)
 export(write_fasta)
-importFrom(Biostrings,BStringSetList)
-importFrom(Biostrings,getSeq)
-importFrom(Biostrings,writeXStringSet)
-importFrom(GenomicRanges,`mcols<-`)
-importFrom(GenomicRanges,end)
-importFrom(GenomicRanges,mcols)
-importFrom(GenomicRanges,seqnames)
-importFrom(GenomicRanges,start)
+importFrom(Biostrings,
+  BStringSetList,
+  getSeq,
+  writeXStringSet
+)
+importFrom(GenomicRanges,
+  "mcols<-",
+  end,
+  mcols,
+  seqnames,
+  start
+)
 importFrom(dplyr,desc)
-importFrom(ggplot2,.pt)
-importFrom(ggplot2,aes)
-importFrom(ggplot2,element_blank)
-importFrom(ggplot2,element_text)
-importFrom(ggplot2,geom_tile)
-importFrom(ggplot2,ggplot)
-importFrom(ggplot2,ggtitle)
-importFrom(ggplot2,labs)
-importFrom(ggplot2,scale_fill_continuous)
-importFrom(ggplot2,scale_fill_gradient2)
-importFrom(ggplot2,scale_fill_manual)
-importFrom(ggplot2,scale_x_continuous)
-importFrom(ggplot2,scale_y_continuous)
-importFrom(ggplot2,stat_ecdf)
-importFrom(ggplot2,theme)
-importFrom(ggplot2,theme_bw)
-importFrom(ggplot2,theme_minimal)
-importFrom(magrittr,"%<>%")
-importFrom(magrittr,"%>%")
-importFrom(magrittr,"%T>%")
+importFrom(ggplot2,
+  .pt,
+  aes,
+  element_blank,
+  element_text,
+  geom_tile,
+  ggplot,
+  ggtitle,
+  labs,
+  scale_fill_continuous,
+  scale_fill_gradient2,
+  scale_fill_manual,
+  scale_x_continuous,
+  scale_y_continuous,
+  stat_ecdf,
+  theme,
+  theme_bw,
+  theme_minimal
+)
+importFrom(magrittr,
+  "%<>%",
+  "%>%",
+  "%T>%"
+)
 importFrom(matrixStats,colMaxs)
 importFrom(methods,is)
 importFrom(readr,cols)
-importFrom(rlang,"!!")
-importFrom(rlang,":=")
-importFrom(rlang,.data)
-importFrom(rlang,enquo)
-importFrom(rlang,sym)
+importFrom(rlang,
+  "!!",
+  ":=",
+  .data,
+  enquo,
+  sym
+)
 importFrom(stats,reorder)
 importFrom(tibble,rowid_to_column)
-importFrom(tibble,rownames_to_column)
-importFrom(tidyr,nest)
-importFrom(tidyr,separate)
-importFrom(tidyr,unnest)
-importFrom(utils,compareVersion)
-importFrom(utils,head)
+importFrom(tidyr,
+  nest,
+  separate,
+  unnest
+)
+importFrom(utils,
+  compareVersion,
+  head
+)

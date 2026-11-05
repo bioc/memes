@@ -172,7 +172,7 @@ runAme(seqs, database = motif_file)
 dreme_xml <- system.file("extdata", "dreme.xml", package = "memes")
 dreme_results <- importDremeXML(dreme_xml)
 
-# database can be set to multiple values like so: 
+# database can be set to multiple values like so:
 runAme(seqs, database = list(motif_file, "my_dreme_motifs" = dreme_results))
 }
 }

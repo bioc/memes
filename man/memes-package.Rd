@@ -6,11 +6,7 @@
 \alias{memes-package}
 \title{memes: motif matching, comparison, and de novo discovery using the MEME Suite}
 \description{
-A seamless interface to the MEME Suite family of tools for motif
-    analysis. 'memes' provides data aware utilities for using GRanges objects as
-    entrypoints to motif analysis, data structures for examining & editing motif
-    lists, and novel data visualizations. 'memes' functions and data structures are
-    amenable to both base R and tidyverse workflows.
+A seamless interface to the MEME Suite family of tools for motif analysis. 'memes' provides data aware utilities for using GRanges objects as entrypoints to motif analysis, data structures for examining & editing motif lists, and novel data visualizations. 'memes' functions and data structures are amenable to both base R and tidyverse workflows.
 }
 \seealso{
 Useful links:
@@ -23,6 +19,11 @@ Useful links:
 }
 \author{
 \strong{Maintainer}: Sabrina Nystrom \email{nystromdev@gmail.com} (\href{https://orcid.org/0000-0003-1000-1579}{ORCID}) [copyright holder]
+
+Authors:
+\itemize{
+  \item Sabrina Nystrom \email{nystromdev@gmail.com} (\href{https://orcid.org/0000-0003-1000-1579}{ORCID}) [copyright holder]
+}
 
 }
 \keyword{internal}

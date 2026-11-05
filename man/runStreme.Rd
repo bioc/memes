@@ -61,7 +61,7 @@ enrichment. "cd" for central distance (control must be set to NA for "cd").}
 (default: TRUE). Warnings are always printed regardless of this setting.}
 
 \item{...}{pass any commandline options as R function arguments. For a
-complete list of STREME options, see 
+complete list of STREME options, see
 [the STREME manual](https://meme-suite.org/meme/doc/streme.html).}
 }
 \value{
@@ -92,7 +92,7 @@ If you have fewer than 50 sequences, consider using [runMeme()] instead.
  Timothy L. Bailey, "STREME: Accurate and versatile sequence motif
  discovery", Bioinformatics, 2021.
  https://doi.org/10.1093/bioinformatics/btab203
- 
+
  # Licensing
  The MEME Suite is free for non-profit use, but for-profit users should purchase a
  license. See the [MEME Suite Copyright Page](http://meme-suite.org/doc/copyright.html) for details.

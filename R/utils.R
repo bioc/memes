@@ -175,7 +175,6 @@ add_sequence <- function(ranges, genome, name = "sequence") {
 #' @param name name of column to hold sequence information
 #'
 #' @return
-#' @importFrom tibble rownames_to_column
 #' @importFrom tidyr separate
 #'
 #' @noRd
@@ -189,9 +188,11 @@ sequence_as_granges <- function(seq, name = "sequence") {
 build_sequence_as_granges <- function() {
   fun <- function(seq, name = "sequence") {
     name <- rlang::enquo(name)
-    seq %>%
-      as.data.frame %>%
-      tibble::rownames_to_column("coords") %>%
+    data.frame(
+      coords = names(seq),
+      x = as.character(seq),
+      stringsAsFactors = FALSE
+    ) %>%
       dplyr::rename(!!name := "x") %>%
       tidyr::separate("coords", c("seqnames", "start", "end")) %>%
       GenomicRanges::GRanges(.)

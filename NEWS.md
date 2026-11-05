@@ -1,3 +1,5 @@
+# memes 1.21.1
+* Fixes a bug converting string sets to data.frame in newer versions of bioc
 # memes 1.19.1
 * Removes `ggseqlogo` dependency as it is being archived from CRAN, standardizes on universalmotif::view_logo for any internals that did not already use it (thanks @bjmt for the implementation hint)
 * @karawoo fixed a CI bug

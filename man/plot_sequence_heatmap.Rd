@@ -59,7 +59,7 @@ motifs <- add_sequence(example_fimo, genome)
 plot_sequence_heatmap(motifs$sequence)
 
 # Use on named list
-sequences <- list("set 1" = motifs$sequence[1:100], 
+sequences <- list("set 1" = motifs$sequence[1:100],
                   "set 2" = motifs$sequence[101:200])
 plot_sequence_heatmap(sequences)
 
