@@ -1,7 +1,7 @@
 Package: memes
 Type: Package
 Title: motif matching, comparison, and de novo discovery using the MEME Suite
-Version: 1.22.0
+Version: 1.23.0
 Authors@R: person("Sabrina", "Nystrom",
     email = "nystromdev@gmail.com", 
     role = c("aut", "cre", "cph"),
